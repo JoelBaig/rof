@@ -1,0 +1,30 @@
+@import './../../mixin.scss';
+
+.start-screen {
+    background-color: #404040;
+    max-width: 100%;
+    @include elementSize();
+    @include dFlex($f: flex, $c: center, $ai: center, $fd: none);
+
+    >img {
+        height: 100vh;
+    }
+}
+
+.start-label-box {
+    position: absolute;
+    top: 800px;
+    left: 0;
+    right: 0;
+    @include dFlex();
+
+    >img {
+        width: 40vw;
+        height: auto;
+
+        &:hover {
+            filter: brightness(1.2);
+            cursor: pointer;
+        }
+    }
+}
