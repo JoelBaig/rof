@@ -1,0 +1,31 @@
+@import './../../mixin.scss';
+
+.field {
+    @include dFlex($f: flex, $c: center, $ai: center);
+    @include elementSize($w: 100vw, $h: 100vh, $mw: 100%);
+    background-image: url('/assets/img/game/board.jpg');
+    background-size: cover;
+}
+
+.card-stack {
+    position: relative;
+
+    >img {
+        @include elementSize($w: 120px, $h: 170px);
+        position: absolute;
+    }
+}
+
+.top-card {
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+        transform: scale(1.2) translateY(-10px);
+    }
+}
+
+.pick-card {
+    transition: all 125ms ease-in-out;
+    transform: scale(1.5) !important;
+}
