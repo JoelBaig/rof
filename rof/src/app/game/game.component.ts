@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Game } from '../../models/game';
 
 @Component({
@@ -6,8 +6,9 @@ import { Game } from '../../models/game';
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
-export class GameComponent {
+export class GameComponent implements OnInit {
   pickCardAnimation = false;
+  currentCard: string | undefined;
   game: Game = new Game();
 
   ngOnInit(): void {
@@ -19,7 +20,8 @@ export class GameComponent {
   }
 
   takeCard() {
+    this.currentCard = this.game.stack.pop();
+    console.log(this.currentCard)
     this.pickCardAnimation = true;
-    console.log(this.game)
   }
 }
