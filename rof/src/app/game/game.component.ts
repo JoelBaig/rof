@@ -21,7 +21,18 @@ export class GameComponent implements OnInit {
 
   takeCard() {
     this.currentCard = this.game.stack.pop();
-    console.log(this.currentCard)
     this.pickCardAnimation = true;
+    console.log(this.game)
   }
+
+  // takeCard() {
+  //   if (this.game.stack.length > 0) {
+  //     this.currentCard = this.game.stack.pop()!;
+  //     this.pickCardAnimation = true;
+  //   } else {
+  //     this.currentCard = '';
+  //     console.warn('Keine Karten mehr im Stapel.');
+  //   }
+  //   console.log(this.game);
+  // }
 }
