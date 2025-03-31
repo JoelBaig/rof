@@ -19,18 +19,6 @@ export class GameComponent implements OnInit {
     this.game = new Game();
   }
 
-  // takeCard() {
-  //   if (!this.pickCardAnimation) {
-  //     this.currentCard = this.game.stack.pop();
-  //     this.pickCardAnimation = true;
-  //     this.game.playedCard.push(this.currentCard);
-
-  //     setTimeout(() => {
-  //       this.pickCardAnimation = false;
-  //     }, 1000);
-  //   }
-  // }
-
   takeCard() {
     const card = this.game.stack.pop();
 
@@ -44,15 +32,4 @@ export class GameComponent implements OnInit {
       }, 1000);
     }
   }
-
-  // takeCard() {
-  //   if (this.game.stack.length > 0) {
-  //     this.currentCard = this.game.stack.pop()!;
-  //     this.pickCardAnimation = true;
-  //   } else {
-  //     this.currentCard = '';
-  //     console.warn('Keine Karten mehr im Stapel.');
-  //   }
-  //   console.log(this.game);
-  // }
 }
