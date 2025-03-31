@@ -25,10 +25,10 @@ export class GameComponent implements OnInit {
     if (card !== undefined) {
       this.currentCard = card;
       this.pickCardAnimation = true;
-      this.game.playedCard.push(card);
 
       setTimeout(() => {
         this.pickCardAnimation = false;
+        this.game.playedCard.push(card);
       }, 1000);
     }
   }
