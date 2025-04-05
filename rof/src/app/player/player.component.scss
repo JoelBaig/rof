@@ -3,5 +3,6 @@
 .player {
     img {
         @include elementSize($w: 100px, $h:100px);
+        object-fit: cover;
     }
 }
