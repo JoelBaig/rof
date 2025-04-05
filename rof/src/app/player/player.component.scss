@@ -2,8 +2,10 @@
 
 .player {
     @include dFlex($c: none, $ai: center);
-    @include elementSize($w: 300px);
+    @include elementSize($w: 300px, $h: 110px);
     background-color: orange;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
 
     >span {
         font-size: 32px;
@@ -14,5 +16,6 @@
         @include elementSize($w: 100px, $h: 100px);
         object-fit: cover;
         border-radius: 100%;
+        margin-left: 8px;
     }
 }
