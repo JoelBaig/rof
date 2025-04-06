@@ -4,8 +4,8 @@
     @include dFlex($c: none, $ai: center);
     @include elementSize($w: 300px, $h: 110px);
     background-color: orange;
-    border-top-left-radius: 40px;
-    border-bottom-left-radius: 40px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 
     >span {
         font-size: 32px;
