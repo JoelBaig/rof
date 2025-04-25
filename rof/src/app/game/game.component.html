@@ -5,15 +5,15 @@
 <div class="field">
     <div class="card-stack">
         <img [ngStyle]="{'right.px': i * 5}" *ngFor="let c of [0,1,2,3]; let i = index;"
-            src="/assets/img/cards/card_cover.png" alt="">
+            src="assets/img/cards/card_cover.png" alt="">
 
-        <img (click)="takeCard()" style="right: 25px" src="/assets/img/cards/card_cover.png" alt="">
+        <img (click)="takeCard()" style="right: 25px" src="assets/img/cards/card_cover.png" alt="">
 
-        <img *ngFor="let card of game.playedCard" src="/assets/img/cards/{{ card }}.png" class="played-card"
+        <img *ngFor="let card of game.playedCard" src="assets/img/cards/{{ card }}.png" class="played-card"
             alt="played_card">
 
         <img (click)="takeCard()" *ngIf="pickCardAnimation" class="pick-card" style="right: 25px; top: 50px"
-            src="/assets/img/cards/{{ currentCard }}.png" alt="">
+            src="assets/img/cards/{{ currentCard }}.png" alt="">
     </div>
 </div>
 
