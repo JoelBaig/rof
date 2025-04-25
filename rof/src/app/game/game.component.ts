@@ -34,11 +34,18 @@ export class GameComponent implements OnInit {
   }
 
   takeCard() {
+    if (this.game.players.length === 0) {
+      alert('Bitte füge zuerst Spieler hinzu!');
+      return;
+    }
+
     const card = this.game.stack.pop();
 
     if (card !== undefined) {
       this.currentCard = card;
       this.pickCardAnimation = true;
+      this.game.currentPlayer++;
+      this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;
 
       setTimeout(() => {
         this.pickCardAnimation = false;
@@ -51,7 +58,7 @@ export class GameComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
     dialogRef.afterClosed().subscribe((name: string) => {
-     this.game.players.push(name);
+      this.game.players.push(name);
     });
   }
 }
