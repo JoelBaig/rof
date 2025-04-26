@@ -3,7 +3,7 @@
 .field {
     @include dFlex($f: flex, $c: center, $ai: center);
     @include elementSize($w: 100vw, $h: 100vh, $mw: 100%);
-    background-image: url('assets/img/game/board.jpg');
+    background-image: url('../../../assets/img/game/board.jpg');
     background-size: cover;
 }
 
