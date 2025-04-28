@@ -17,7 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    // AppComponent,
     StartScreenComponent,
     GameComponent,
     PlayerComponent,
@@ -36,6 +36,8 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  // bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

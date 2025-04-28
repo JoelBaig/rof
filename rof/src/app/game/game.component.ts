@@ -16,6 +16,7 @@ import { DialogAddPlayerComponent } from '../dialog-add-player/dialog-add-player
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.scss']
 })
+
 export class GameComponent implements OnInit {
   pickCardAnimation = false;
   currentCard: string | undefined;
