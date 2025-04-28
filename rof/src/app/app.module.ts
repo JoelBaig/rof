@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,13 +12,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { DialogAddPlayerComponent } from './dialog-add-player/dialog-add-player.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
 import { GameInfoComponent } from './game-info/game-info.component';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
-    // AppComponent,
+    AppComponent,
     StartScreenComponent,
     GameComponent,
     PlayerComponent,
@@ -34,10 +35,9 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     FormsModule,
     MatCardModule,
+    MatFormFieldModule,
   ],
   providers: [],
-  // bootstrap: [AppComponent]
+  bootstrap: [AppComponent]
 })
-export class AppModule { 
-  
-}
+export class AppModule { }
